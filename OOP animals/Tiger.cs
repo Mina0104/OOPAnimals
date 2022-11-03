@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_animals
 {
-    public class Tiger :Animal
+    public class Tiger :AbstactAnimal
     {
         public Tiger(string name, int age): base (name,age)
         {
