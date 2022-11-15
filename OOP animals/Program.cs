@@ -12,6 +12,13 @@ Console.WriteLine(tiger.ToSound().Text);
 Console.WriteLine(horse.ToEat("trava", 2).Text);
 Console.WriteLine(horse.ToSound().Text);
 
+Aviary forest = new Aviary("Forest", BiomType.Tropic,2,"10");
+Tiger newTiger = new Tiger("Sim", 7);
+Console.WriteLine(forest.AddAnimal(newTiger));
+
+Aviary mountain = new Aviary("Mountain", BiomType.Jungle, 3, "20");
+Horse newHorse = new Horse("Simba", 3,"3 km/c");
+Console.WriteLine(mountain.AddAnimal(newHorse)); 
 
 
 

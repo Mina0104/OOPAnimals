@@ -13,6 +13,7 @@ namespace OOP_animals
             Biome = BiomType.Tropic;
             Eat = new string[] { "myaso" };
             _sound = "xxxxxx";
+            Species = "Tiger";
         }
     }
 }

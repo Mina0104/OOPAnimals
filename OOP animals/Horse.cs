@@ -8,14 +8,9 @@ namespace OOP_animals
 {
     public class Horse : AbstactAnimal
     {
-        public string Name { get; protected set; }
-        public BiomType Biome { get; protected set; }
-        public string[] Eat { get; set; }
-        public int Age { get; set; }
-        public bool IsPradator { get; protected set; }
-        protected string _sound;
-        public string Run { get; set; }
-        public Horse (string name, int age,string run) : base(name, age)
+        
+        public string Speed { get; set; }
+        public Horse (string name, int age,string speed) : base(name, age)
         {
             Name = name;
             Age = age;
@@ -23,7 +18,8 @@ namespace OOP_animals
             Eat = new string[] { "trava" };
             _sound = "hihahiha";
             IsPradator = false;
-            Run = run;
+            Speed = speed;
+            Species = "Horse";
 
         }
         
@@ -33,7 +29,7 @@ namespace OOP_animals
             return new Message()
             {
                 Text = $"{Name} poel {kg} kilogramma {eat} ",
-                Name = this.Name,
+                SenderName = this.Name,
                 MessageType = MessageType.Eat,
             };
 
@@ -43,7 +39,7 @@ namespace OOP_animals
             return new Message()
             {
                 Text = $"{Name} izdaet zvuki {_sound}",
-                Name = this.Name,
+                SenderName = this.Name,
                 MessageType = MessageType.Sound,
             };
         }
@@ -51,8 +47,8 @@ namespace OOP_animals
         {
             return new Message()
             {
-                Text = $"{Name} beqayet {Run}",
-                Name = this.Name,
+                Text = $"{Name} beqayet {Speed}",
+                SenderName = this.Name,
                 MessageType = MessageType.Run
             };
         }

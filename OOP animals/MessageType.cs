@@ -11,6 +11,8 @@ namespace OOP_animals
         Play,
         Eat,
         Sound,
-        Run
+        Run,
+        AddAnimalFail,
+        AddAnimalSuccess
     }
 }
